@@ -165,8 +165,7 @@ bool Launcher::detectJRE()
 #ifdef Q_WS_MAC
 	
 	// Mac OS X
-	QString pathOnOSX = "/System/Library/Frameworks/JavaVM.framework/"
-						"Versions/CurrentJDK/Commands/java";
+	QString pathOnOSX = "/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home/bin/java";
 	if (Launcher::execute(pathOnOSX, QStringList("-version")) == 0)
 	{
 		javaExecPath = pathOnOSX;
